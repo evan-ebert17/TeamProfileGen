@@ -35,6 +35,7 @@ function appMenu() {
         message: "What is the team manager's id?",
         validate: answer => {
           const pass = answer.match(
+            //regex Expression for passworld validation
             /^[1-9]\d*$/
           );
           if (pass) {
@@ -89,7 +90,7 @@ function appMenu() {
         choices: [
           "Engineer",
           "Intern",
-          "Nevermind"
+          "Finished"
         ]
       }
     ]).then(userChoice => {
@@ -220,7 +221,7 @@ function appMenu() {
       {
         type: "input",
         name: "internSchool",
-        message: "What is your intern's school?",
+        message: "Where did your intern go to school?",
         validate: answer => {
           if (answer !== "") {
             return true;
